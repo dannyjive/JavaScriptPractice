@@ -1,15 +1,6 @@
 function moveZeros(arr) {
-  const nonZeros = [];
-  let zeroCount = 0;
-
-  for (item of arr) {
-    if (item === 0) {
-      zeroCount++;
-    } else {
-      nonZeros.push(item);
-    }
-  }
-
+  const nonZeros = arr.filter((x) => x !== 0);
+  const zeroCount = arr.length - nonZeros.length;
   return [...nonZeros, ...Array(zeroCount).fill(0)];
 }
 
