@@ -1,0 +1,15 @@
+function expandedForm(num) {
+  const numStr = num.toString();       // Convert number to string
+  const length = numStr.length;
+  const result = [];
+
+  for (let i = 0; i < length; i++) {
+    const digit = numStr[i];
+    if (digit !== '0') {
+      const zeros = length - i - 1;    // Number of zeros to add
+      result.push(digit + '0'.repeat(zeros));
+    }
+  }
+
+  return result.join(' + ');
+}
