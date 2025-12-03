@@ -1,0 +1,5 @@
+function minValue(values){
+  const mySet = new Set(values)
+  const myArray = Array.from(mySet)
+  return Number(myArray.sort((a, b) => a - b).join(''));
+}
