@@ -54,7 +54,7 @@ var containsNearbyDuplicateHashVer = function (nums, k) {
     for (let i = 0; i < nums.length; i++){
         let num = nums[i]
 
-        if (map[num] !== undefined && Math.abs((i - map[num]) <= k)){
+        if (map[num] !== undefined && Math.abs(i - map[num] <= k)){
             return true;
         }
         map[num] = i;
